@@ -7,7 +7,7 @@
     <title>GitHub Accounts</title>
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- VENDOR SCRIPTS -->
     <!-- jquery -->
@@ -29,10 +29,21 @@
 
           <h2>Developers</h2>
           <!-- append the compiled template here -->
-          <ul id="developers-list" class="list-group"></ul>
+          <ul id="developers-list" class="list-group">
+            <!-- <li class="list-group-item">
+              <a href="https://www.github.com/bobloblaw" target="_blank"><strong>Bob Loblaw</strong></a>
+            </li> -->
+          </ul>
         </div>
       </div>
     </div>
     <!-- create a template here -->
+    <script id="developer-li-template" type="text/x-handlebars-template">
+      {{#each developers}}
+        <li class="list-group-item">
+          <a href="https://www.github.com/{{githubUsername}}" target="_blank"><strong>{{firstName}} {{lastName}}</strong></a>
+        </li>
+      {{/each}}
+    </script>
   </body>
 </html>
